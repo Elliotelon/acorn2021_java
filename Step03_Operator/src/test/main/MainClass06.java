@@ -24,7 +24,7 @@ public class MainClass06 {
 		}
 		System.out.println(result2);
 		
-		//10.12f이면 float이지만 생략되었으므로 double
+		//10.12f이면 float이지만 생략되었으므로 double!
 	    double	result3=isWait ? 10.12 : 99.5;
 	}
 }
