@@ -1,4 +1,9 @@
 package test.mypac;
+/*
+ * 클래스 안에 정의 할 수 있는것
+ * 1.필드 2.메소드 3.생성자
+ * 
+ */
 
 public class MemberDto {
 	public int num;
