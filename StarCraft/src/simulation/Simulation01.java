@@ -39,53 +39,9 @@ public class Simulation01 {
 		medic1.healGh();
 		
 		System.out.println("------------------------------------------------------");
-		
-		marine1.attackFi();
-		marine1.attackFi();
-		marine1.attackFi();
-		marine1.attackFi();
-		marine1.attackFi();
-		marine1.attackFi();
-		marine1.attackFi();
-		marine1.attackFi();
-		marine1.attackFi();
-		
-		
-		
 	
 		
 		
 		
-		//마린이 공격해서 상대에너지가 0이하가 될때 상대 사망
-		if(marine1.hp1<=0) {
-			firebat1.die();
-		}
-		if(marine1.hp2<=0) {
-			ghost1.die();
-		}
-		if(marine1.hp4<=0) {
-			medic1.die();
-		}
-		
-		//파벳이 공격해서 상대에너지가 0이하가 될때 상대 사망
-		if(firebat1.hp2<=0) {
-			ghost1.die();
-		}
-		if(firebat1.hp3<=0) {
-			marine1.die();
-		}
-		if(firebat1.hp4<=0) {
-			medic1.die();
-		}
-		//고스트가 공격해서 상대에너지가 0이하가 될때 상대 사망
-		if(ghost1.hp1<=0) {
-			firebat1.die();
-		}
-		if(ghost1.hp3<=0) {
-			marine1.die();
-		}
-		if(ghost1.hp4<=0) {
-			medic1.die();
-		}
 	}
 }
