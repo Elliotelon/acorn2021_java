@@ -6,6 +6,8 @@ public class Computer {
 	private Memory memory;
 	private HardDisk hardDisk;
 	
+	//디폴트 생성자
+	public Computer() {}
 	
 	//생성자
 	public Computer(Cpu cpu, Memory memory, HardDisk hardDisk) {
