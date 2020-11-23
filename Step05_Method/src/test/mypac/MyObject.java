@@ -25,7 +25,7 @@ public class MyObject {
 		return greet;
 	}
 	
-	public House getHouse() {
+	public  House getHouse() {
 		return new House(); //House h=new House(); return h;
 	}
 	//Phone type을 전달받는 메소드
