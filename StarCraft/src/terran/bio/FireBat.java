@@ -74,4 +74,102 @@ public class FireBat {
 				+" 스팀팩 사용!! hp(-2) sp(+10)");
 	}
 
+	public int getHp1() {
+		return hp1;
+	}
+
+	public void setHp1(int hp1) {
+		this.hp1 = hp1;
+	}
+
+	public int getSp1() {
+		return sp1;
+	}
+
+	public void setSp1(int sp1) {
+		this.sp1 = sp1;
+	}
+
+	public int getMp1() {
+		return mp1;
+	}
+
+	public void setMp1(int mp1) {
+		this.mp1 = mp1;
+	}
+
+	public int getHp2() {
+		return hp2;
+	}
+
+	public void setHp2(int hp2) {
+		this.hp2 = hp2;
+	}
+
+	public int getSp2() {
+		return sp2;
+	}
+
+	public void setSp2(int sp2) {
+		this.sp2 = sp2;
+	}
+
+	public int getMp2() {
+		return mp2;
+	}
+
+	public void setMp2(int mp2) {
+		this.mp2 = mp2;
+	}
+
+	public int getHp3() {
+		return hp3;
+	}
+
+	public void setHp3(int hp3) {
+		this.hp3 = hp3;
+	}
+
+	public int getSp3() {
+		return sp3;
+	}
+
+	public void setSp3(int sp3) {
+		this.sp3 = sp3;
+	}
+
+	public int getMp3() {
+		return mp3;
+	}
+
+	public void setMp3(int mp3) {
+		this.mp3 = mp3;
+	}
+
+	public int getHp4() {
+		return hp4;
+	}
+
+	public void setHp4(int hp4) {
+		this.hp4 = hp4;
+	}
+
+	public int getSp4() {
+		return sp4;
+	}
+
+	public void setSp4(int sp4) {
+		this.sp4 = sp4;
+	}
+
+	public int getMp4() {
+		return mp4;
+	}
+
+	public void setMp4(int mp4) {
+		this.mp4 = mp4;
+	}
+	
+	
+
 }

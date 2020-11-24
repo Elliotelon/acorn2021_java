@@ -7,6 +7,9 @@ public class MainClass02 {
 		for(int i=0; i<nums.length; i++) {
 			int tmp=nums[i];
 			System.out.println(tmp);
+			
 		}
+		
 	}
+	
 }

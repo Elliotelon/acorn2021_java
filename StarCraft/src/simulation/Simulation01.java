@@ -39,8 +39,10 @@ public class Simulation01 {
 		medic1.healGh();
 		
 		System.out.println("------------------------------------------------------");
+		marine1.attackGh();
+		marine1.attackGh();
+		firebat1.attackGh();
 	
-		
 		
 		
 	}

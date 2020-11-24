@@ -21,7 +21,8 @@ public class MainClass01 {
 		// boolean type 3개를 저장하고 있는 배열
 		boolean[] truth= {true, false, false};
 		// String type 3개를 저장하고 있는 배열
-		String[] names= {"김구라", "해골", "원숭이"};
+		String[] names= {"김구라", "해골", "원숭이"}; 
+		
 		//배열의 방의 갯수 5가 참조 된다.
 		int size=nums.length;
 		//배열의 방의 갯수 3이 참조 된다.

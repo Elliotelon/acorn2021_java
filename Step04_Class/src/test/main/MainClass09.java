@@ -26,5 +26,6 @@ public class MainClass09 {
 		Computer com2=new Computer(c1, m1, h1);
 		com2.playGame();
 		com2.sendEmail("oli999@naver.com");	
+		
 	}
 }
