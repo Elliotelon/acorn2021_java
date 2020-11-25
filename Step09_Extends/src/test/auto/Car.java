@@ -4,7 +4,6 @@ public class Car {
 	//protected 접근 지정자를 가진 필드
 	protected Engine engine;
 	
-	
 	//Engine type을 인자로 전달 받는 생성자
 	public Car(Engine engine) {
 		this.engine=engine;
