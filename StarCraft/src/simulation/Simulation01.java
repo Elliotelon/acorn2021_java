@@ -39,9 +39,18 @@ public class Simulation01 {
 		medic1.healGh();
 		
 		System.out.println("------------------------------------------------------");
-		marine1.attackGh();
+		marine1.attackFi();
+		ghost1.attackFi();
+		medic1.healFi();
 		marine1.attackGh();
 		firebat1.attackGh();
+		medic1.healGh();
+		firebat1.attackMa();
+		ghost1.attackMa();
+		medic1.healMa();
+		marine1.steam();
+		marine1.state();
+		
 	
 		
 		
