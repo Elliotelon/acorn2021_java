@@ -12,7 +12,7 @@ public class MainClass01 {
 		FruitBox<Banana> box2=new FruitBox<Banana>();
 		FruitBox<Orange> box3=new FruitBox<>(); //<Orange> Orange 생략가능
 		
-		
+
 		box1.item=new Apple();
 		box1.setItem(new Apple());
 		box1.getItem();
