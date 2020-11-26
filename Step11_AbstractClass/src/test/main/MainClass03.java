@@ -4,7 +4,7 @@ import test.mypac.Tank;
 import test.mypac.Weapon;
 
 public class MainClass03 {
-	// Inner Class(내부 글래스에 한해서 필요하다면 static 예약어를 붙일 수 있다.)
+	// Inner Class(내부 클래스에 한해서 필요하다면 static 예약어를 붙일 수 있다.)
 	static class AirPlane extends Weapon{
 
 		@Override
