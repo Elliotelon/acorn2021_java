@@ -1,8 +1,18 @@
 package test.mypac;
 
-public class SmartPhone extends HandPhone {
+// SmartPhone 클래스를 종단 클래스로 만드는 final 예약어 
+//(SmartPhone클래스를 상속받을 수 없게 만듬)
+public final class SmartPhone extends HandPhone {
+	//다폴트 생성자
+	public SmartPhone() {
+		System.out.println("SmartPhone() 생성자 호출됨");
+	}
 	//인터넷 하는 메소드
 	public void doInternet() {
+		call();
+		mobileCall();
+		super.takePicture(); //HandPhone의 takePicture() 호출
+		this.takePicture(); //아래 오버라이드 한 takePicture() 호출
 		System.out.println("인터넷을 해요");
 	}
 	//이 메소드는 재정의한 메소드라고 표시해주는 어노테이션(@)
