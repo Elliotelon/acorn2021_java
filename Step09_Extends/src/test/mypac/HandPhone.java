@@ -13,4 +13,5 @@ public class HandPhone extends Phone {
 	public void takePicture() {
 		System.out.println("30만 화소의 사진을 찍어요");
 	}
+	
 }
