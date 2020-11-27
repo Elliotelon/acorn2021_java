@@ -10,6 +10,7 @@ public class MainClass01 {
 		Remocon r1=new MyRemocon();
 		r1.up();
 		r1.down();
+		
 		//Remocon 인터페이스에 정의된 static final 상수 참조하기
 		System.out.println(Remocon.COMPANY);
 		//Remocon.COMPANY="삼성" final 필드임으로 수정불가

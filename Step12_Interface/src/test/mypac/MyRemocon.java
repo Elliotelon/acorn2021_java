@@ -12,5 +12,4 @@ public class MyRemocon implements Remocon {
 		System.out.println("볼륨을 내려요");
 		
 	}
-
 }

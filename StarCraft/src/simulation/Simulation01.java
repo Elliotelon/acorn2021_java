@@ -50,6 +50,7 @@ public class Simulation01 {
 		medic1.healMa();
 		marine1.steam();
 		marine1.state();
+		marine1.move();
 		
 	
 		

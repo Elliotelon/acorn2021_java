@@ -1,8 +1,9 @@
 package terran.bio;
 
 public class Marine {
+	public final String NAME="Marine";
 	public void move() {
-		System.out.println("마린이 이동하였습니다.");
+		System.out.println(this.NAME+"이 이동하였습니다.");
 	}
 	
 	public void attackFi() {
