@@ -51,6 +51,7 @@ public class Simulation01 {
 		marine1.steam();
 		marine1.state();
 		marine1.move();
+		firebat1.move();
 		
 	
 		
