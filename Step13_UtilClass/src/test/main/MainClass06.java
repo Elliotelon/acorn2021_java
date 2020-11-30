@@ -31,5 +31,32 @@ public class MainClass06 {
 		 *  번호는 3 이름은 원숭이 주소는 상도동
 		 */
 		
+		for(int i=0; i<members.size(); i++) {
+			String info="번호는 " + members.get(i).getNum()+
+					" 이름은 "+members.get(i).getName()+
+					" 주소는 "+members.get(i).getAddr();
+			System.out.println(info);
+		}
+		System.out.println("--------------------------");
+		for(int i=0; i<members.size(); i++) {
+			MemberDto tmp=members.get(i);
+			String info="번호는 " + tmp.getNum()+
+					" 이름은 "+tmp.getName()+
+					" 주소는 "+tmp.getAddr();
+			System.out.println(info);
+		
+		}
+		System.out.println("--------------------------");
+		for(int i=0; i<members.size(); i++) {
+			MemberDto tmp=members.get(i);
+		}
+		for(MemberDto tmp:members) {
+			String info="번호는 " + tmp.getNum()+
+					" 이름은 "+tmp.getName()+
+					" 주소는 "+tmp.getAddr();
+			System.out.println(info);
+			
+		}
+		
 	}
 }
