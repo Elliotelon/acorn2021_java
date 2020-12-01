@@ -43,7 +43,7 @@ public class MainFrame extends JFrame implements ActionListener {
 		}else if(ranNum==2) {
 			rcp="보";
 		}
-		if(rcp>)
+		
 		JOptionPane.showMessageDialog(this, "com : "+rcp+" vs 나 : "+myT.getText());
 	}
 	public static void main(String[] args) {
