@@ -4,7 +4,7 @@ package test.main;
  * 
  * 1. RuntimeException을 상속받아서 만든 실행중에 발생하는 Exception
  * 
- * 2. RuntimeException 을 상속받지 않아서 만든 컴파일(문법체크중) 중에 발생하는 Exception
+ * 2. RuntimeException 을 상속받지 않아서 만든 컴파일(문법체크중) 중에 발생하는 Exception 이때에는 try~catch사용해야함
  */
 public class MainClass05 {
 	public static void main(String[] args) {
