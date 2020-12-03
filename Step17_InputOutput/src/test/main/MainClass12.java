@@ -25,7 +25,7 @@ public class MainClass12 {
 			fw.write("해골\r\n");
 			fw.write("원숭이\r\n");
 			fw.write("주뎅이\r\n");
-			fw.write("덩어리\r\n");
+			fw.write("덩어리\r\n"); 
 			fw.flush();
 			fw.close(); // .close() 마무리를 해주어야 한다.
 		} catch (IOException e) {
