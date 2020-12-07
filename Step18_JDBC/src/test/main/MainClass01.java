@@ -34,11 +34,17 @@ public class MainClass01 {
 		ResultSet rs=null;
 		try {
 			String sql="SELECT num,name,addr FROM member ORDER BY num ASC";
+			//sql문을 대신 실행해주는 PreparedStatment 객체의 참조값 얻어오기
 			pstmt=conn.prepareStatement(sql);
+			//SELECT문 수행하고 결과 row를 ResultSet 객체로 받아오기
 			rs=pstmt.executeQuery();
+			//rs.next() 메소드가 false 를 리턴할때까지 while 반복문 돌기
 			while(rs.next()) {
+				//현재 커서가 위치한 곳에서 num 칼럼의 값을 정수로 얻어내기
 				int num=rs.getInt("num");
+				//현재 커서가 위치한 곳에서 name 칼럼의 값을 문자로 얻어내기
 				String name=rs.getString("name");
+				//현재 커서가 위치한 곳에서 addr 칼럼의 값을 문자로 얻어내기
 				String addr=rs.getString("addr");
 				System.out.println(num+"|"+name+"|"+addr);
 			}
