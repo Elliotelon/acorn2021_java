@@ -13,7 +13,7 @@ public class SuperCar extends Car{
 	//빨리 달리는 메소드
 	public void driveFast() {
 		if(this.engine==null) {
-			System.out.println("Engine 객체가 없어서 달릴수가 없어요");
+			System.out.println("Engine 객체가 없어서 달릴수가 없어요!");
 			return ; //메소드 끝내기
 		}
 		System.out.println("빨리 달려요!!");
