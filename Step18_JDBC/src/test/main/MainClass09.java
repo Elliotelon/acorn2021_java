@@ -32,15 +32,24 @@ public class MainClass09 {
 			System.out.println("수정 실패!");
 		}
 		
-		MemberDto dto2=new MemberDto();
-		dto2.setNum(1);
-		dto2.setName("Kim2");
-		dto2.setAddr("NewYork");
-		boolean isSuccess3=dao.insert(dto2);
-		if(isSuccess3) {
-			System.out.println("추가 성공!");
+		
+			MemberDto dto2=new MemberDto();
+			dto2.setName("Kim3");
+			dto2.setAddr("NewYork");
+			boolean isSuccess3=dao.insert(dto2);
+			
+			if(isSuccess3) {
+				System.out.println("추가 성공!");
+			}else {
+				System.out.println("추가 실패!");
+			}
+		
+		MemberDto isSuccess4=dao.select(12);
+		if(isSuccess4!=null) {
+			System.out.println("한명의정보 선택 성공! "+"num : "+isSuccess4.getNum()+
+					", name : "+isSuccess4.getName()+", addr : "+isSuccess4.getAddr());
 		}else {
-			System.out.println("추가 실패!");
+			System.out.println("한명의정보 선택 실패!");
 		}
 		
 		System.out.println("main 메소드가 종료됩니다.");
