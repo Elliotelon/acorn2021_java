@@ -26,10 +26,15 @@ public class MainClass07 {
 		PreparedStatement pstmt=null;
 		ResultSet rs=null;
 		try {
+			//DBConnect 객체를 이용해서 Connection 객체의 참조값 얻어내기
 			conn=new DBConnect().getConn();
+			//실행할 sql문(SELECT)의 뼈대 구성하기(아직 미완성)
 			String sql="SELECT name,addr FROM member WHERE num=?";
+			//sql문을 대신 실행해 줄 객체의 참조값 얻어오기
 			pstmt=conn.prepareStatement(sql);
+			// ?에 값 바인딩하기
 			pstmt.setInt(1, num);
+			//SELECT 문 수행하고 결과를 ResultSet 으로 받기
 			rs=pstmt.executeQuery();
 			
 			if(rs.next()) {//select 된 결과가 있다면
