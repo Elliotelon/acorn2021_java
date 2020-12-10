@@ -35,7 +35,7 @@ public class DeptFrame extends JFrame implements ActionListener{
 	JTextField text_dname, text_loc, text_deptno;
 	JTable table; //
 	DefaultTableModel model;//
-
+	
 	//생성자
 	public DeptFrame(String title) {
 		super(title);
