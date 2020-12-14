@@ -48,7 +48,7 @@ public class MainClass06 {
 		}
 		System.out.println("--------------------------");
 		for(int i=0; i<members.size(); i++) {
-			MemberDto tmp=members.get(i);
+			MemberDto tmp=members.get(i); 
 		}
 		//위와 같음 생략해서 쓴거임. 확장 for문
 		for(MemberDto tmp:members) {
