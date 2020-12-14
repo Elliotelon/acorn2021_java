@@ -5,6 +5,8 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -14,10 +16,18 @@ import java.net.Socket;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 public class ClientFrame extends JFrame implements ActionListener{
+	//필요한 필드 정의하기
 	JTextField tf;
+	Socket socket;
+	BufferedWriter bw;
+	BufferedReader br;
+	JTextArea ta;
+	
 	//생성자
 	public ClientFrame(String title) {
 		super(title);
@@ -37,7 +47,19 @@ public class ClientFrame extends JFrame implements ActionListener{
 		
 		//버튼 리스너 등록하기
 		sendBtn.addActionListener(this);
+		//채팅 메세지를 출력할 TextArea 객체를 생성해서
+		ta=new JTextArea();
+		//스크롤 가능한 UI에 포장후
+		JScrollPane scPane=new JScrollPane(ta, 
+				JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
+				JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		//스크롤 가능한 UI를 프레임의 가운데 배치한다.
+		add(scPane, BorderLayout.CENTER);
+		//오직 출력 용도로 사용하기위해
+		ta.setEditable(false);
 		
+		//소켓 접속하기
+		connect();
 	
 		
 	}
@@ -50,40 +72,60 @@ public class ClientFrame extends JFrame implements ActionListener{
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//프레임을 화면상에 보이게 하기
 		f.setVisible(true);
+	
 	}
+	//Socket 서버에 접속을 하는 메소드
+	public void connect() {
+		try {
+			//소켓객체
+			socket=new Socket("14.63.164.99", 5000);
+			//서버에 문자열을 출력할 객체
+			bw=new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+			//서버가 전송하는 문자열을 읽어들일 객체
+			br=new BufferedReader(new InputStreamReader(socket.getInputStream()));
+			//새로운 스레드를 시작시켜서 서버에서 문자열이 도착하는지 지속적으로 대기
+			new ClientThread().start();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		//1. JTextField 에 입력한 문자열을 읽어와서
 		String msg=tf.getText();
-		//2. Socket 접속을 해서 전송한다.
-		Socket socket=null;
+		//2. BufferedWriter 객체를 이용해서 출력한다.
 		try {
-			//new Socket("접속할 ip주소", 포트번호)
-			//127.0.0.1 = 나의아이피주소를 부를때 사용 this랑 비슷한느낌
-			socket=new Socket("127.0.0.1", 5000); 
-			System.out.println("서버에 Socket 접속 성공!");
-			//2.Socket을 통해서 출력하기
-			OutputStream os=socket.getOutputStream();
-			OutputStreamWriter osw=new OutputStreamWriter(os);
-			osw.write(msg);//입력한 문자열 출력
-			osw.write("\r\n"); //개행기호출력
-			osw.flush();//방출
-			
-			
-			//3.Socket을 통해서 입력받기
-			InputStream is=socket.getInputStream();
-			InputStreamReader isr=new InputStreamReader(is);
-			BufferedReader br=new BufferedReader(isr);
-			//서버가 전송한 문자열 읽어들이기
-			String line=br.readLine();
-			System.out.println(line);
-			
-			socket.close();
-			
-		}catch(Exception e1) {
+			bw.write(msg);
+			bw.newLine();
+			bw.flush();
+		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
 		//3. JTextField에 입력한 문자열 삭제
 		tf.setText("");
+	}
+	//서버에서 문자열이 전송되는지 지속적으로 대기하는 스레드 객체를 생성할 클래스 설계
+	class ClientThread extends Thread{
+		@Override
+		public void run() {
+			while(true) {
+				try {
+					//대기하다가 문자열이 도착하면 메소드가 리턴한다.
+					String line=br.readLine();
+					//도착된 메세지를 JTextArea에 개행기호와 함께 추가하기
+					ta.append(line+"\r\n");
+					//출력할 문서의 높이
+					int height=ta.getDocument().getLength();
+					//높이 만큼 JTextArea를 스크롤시켜서 가장 아래에 있는 문자열이 보이게
+					ta.setCaretPosition(height);
+					
+				} catch (IOException e) {
+					
+					e.printStackTrace();
+				}
+			}
+		}
 	}
 }
