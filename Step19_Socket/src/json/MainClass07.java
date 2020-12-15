@@ -12,7 +12,7 @@ public class MainClass07 {
 		// "nums" 라는 키값으로 JSONArray 빼내기
 		JSONArray nums=obj.getJSONArray("nums");
 		
-		// JSONObject 에서 값 빼내기
+		// JSONObject 에서 값 빼내기!
 		int a=info.getInt("num");
 		String b=info.getString("name");
 		// JSONArray 에서 값 빼내기
