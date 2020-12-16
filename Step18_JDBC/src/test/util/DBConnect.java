@@ -13,7 +13,7 @@ public class DBConnect {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			//접속할 DB 정보
 			String url="jdbc:oracle:thin:@14.63.164.99:1521:xe";
-			//String url="jdbc:oracle:thin:@localhost:1521:xe";
+			//String url="jdbc:oracle:thin:@localhost:1521:xe"; 1521(포트) : oracle은 보통 1521포트임.
 			//접속하고 Connection 객체의 참조값 얻어오기
 			conn=DriverManager.getConnection(url, "acorn01", "tiger01");
 			//conn=DriverManager.getConnection(url, "scott", "tiger");

@@ -42,9 +42,9 @@ public class TodoFrame extends JFrame implements ActionListener {
 			JLabel label_content=new JLabel("콘텐츠");
 			//JLabel label_regdate=new JLabel("날짜");
 			//아래 메소드에서 필요한값을 필드에저장하기
-			text_num=new JTextField(10);
+			//text_num=new JTextField(10);
 			text_content=new JTextField(10);
-			text_regdate=new JTextField(10);
+			//text_regdate=new JTextField(10);
 			JButton btn_add=new JButton("추가");
 			
 			//페널에 순서대로 추가하기

@@ -55,7 +55,7 @@ public class TodoDao {
 			ResultSet rs=null;
 			try {
 				conn=new DBConnect().getConn();
-				String sql="SELECT content, FROM todo WHERE num=?";
+				String sql="SELECT content,regdate FROM todo WHERE num=?";
 				pstmt=conn.prepareStatement(sql);
 				pstmt.setInt(1, num);
 				rs=pstmt.executeQuery();
