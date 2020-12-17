@@ -71,9 +71,9 @@ public class ServerMain {
 		@Override
 		public void run() {
 			try {
-				//클라이언트가 전송하는 문자열을 읽어들일 객체
+				//클라이언트가 전송하는 문자열을 읽어들일 객체.
 				BufferedReader br=new BufferedReader(new InputStreamReader(socket.getInputStream()));
-				//클라이언트에게 문자열을 출력할 객체
+				//클라이언트에게 문자열을 출력할 객체.
 				bw=new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
 				//반복문 돌면서 클라이언트가 전송하는 문자열이 있는지 읽어와 본다.
 				while(true) {
