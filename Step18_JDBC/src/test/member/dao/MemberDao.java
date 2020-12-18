@@ -93,8 +93,8 @@ public class MemberDao {
 			try {
 				//객체들을 무한정 만들어 낼 수 없어서 닫아주어야 다른 사람들도 사용가능하다.
 				if(pstmt!=null)pstmt.close();
-				if(conn!=null)pstmt.close();
-				if(rs!=null)pstmt.close();
+				if(conn!=null)conn.close();
+				if(rs!=null)rs.close();
 			}catch(Exception e) {}
 		}
 		return dto;
@@ -123,7 +123,7 @@ public class MemberDao {
 		}finally {
 			try {
 				if(pstmt!=null)pstmt.close();
-				if(conn!=null)pstmt.close();
+				if(conn!=null)conn.close();
 			}catch(Exception e) {}
 		}
 		if(flag>0) {
@@ -159,7 +159,7 @@ public class MemberDao {
 		}finally {
 			try {
 				if(pstmt!=null)pstmt.close();
-				if(conn!=null)pstmt.close();
+				if(conn!=null)conn.close();
 			}catch(Exception e) {}
 		}
 		if(flag>0) {
@@ -195,7 +195,7 @@ public class MemberDao {
 			//마무리 작업
 				try {
 					if(pstmt!=null)pstmt.close();
-					if(conn!=null)pstmt.close();
+					if(conn!=null)conn.close();
 				}catch(Exception e) {}
 		}
 		if(flag>0) {
