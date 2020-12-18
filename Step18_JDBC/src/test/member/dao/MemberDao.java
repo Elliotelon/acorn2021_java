@@ -101,7 +101,7 @@ public class MemberDao {
 	}
 	
 	//회원 한명의 정보를 저장하는 메소드를 만들어 보세요.
-	//메소드명 : insert
+	//메소드명 : insert.
 	//리턴 type : 알아서
 	//메소드에 전달하는 인자의 type : MemberDto
 	public boolean insert(MemberDto dto) {
@@ -134,7 +134,7 @@ public class MemberDao {
 	}	
 	
 	//회원 한명의 정보를 수정하는 메소드를 만들어 보세요.
-	//메소드명 : update
+	//메소드명 : update.
 	//리턴 type : 알아서
 	//메소드에 전달하는 인자의 type : MemberDto
 	public boolean update(MemberDto dto) {
